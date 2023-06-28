@@ -1,0 +1,39 @@
+<div class="meal-plans">
+  <h2>Recomendaciones de Planes de Comidas</h2>
+
+  <div class="filters">
+    <!-- Aquí puedes agregar los filtros para las preferencias alimentarias y restricciones dietéticas -->
+    <label for="preferences">Preferencias alimentarias:</label>
+    <select id="preferences" (change)="filterByPreferences($event.target.value)">
+      <option value="vegetariano">Vegetariano</option>
+      <option value="vegano">Vegano</option>
+      <option value="sin-gluten">Sin gluten</option>
+      <!-- Otras opciones de preferencias alimentarias -->
+    </select>
+
+    <label for="restrictions">Restricciones dietéticas:</label>
+    <select id="restrictions" (change)="filterByRestrictions($event.target.value)">
+      <option value="diabetes">Diabetes</option>
+      <option value="hipertension">Hipertensión</option>
+      <option value="celiacos">Celiacos</option>
+      <!-- Otras opciones de restricciones dietéticas -->
+    </select>
+  </div>
+
+  <div class="meal-plans-list">
+    <!-- Aquí se mostrará la lista de planes de comidas recomendados -->
+    <div *ngIf="mealPlans.length > 0; else noPlans">
+      <div *ngFor="let plan of mealPlans" class="meal-plan">
+        <h3>{{ plan.name }}</h3>
+        <p>{{ plan.description }}</p>
+        <!-- Mostrar otros detalles del plan de comidas, como ingredientes, instrucciones, etc. -->
+        <button (click)="viewMealPlanDetails(plan)">Ver detalles</button>
+        <button (click)="getMealPlans(plan)">Guardar</button>
+      </div>
+    </div>
+
+    <ng-template #noPlans>
+      <p>No se encontraron opciones adecuadas.</p>
+    </ng-template>
+  </div>
+</div>
