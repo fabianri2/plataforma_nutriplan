@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProfileComponent } from './profile/profile.component';
-import { MealPlansComponent } from './meal-plans/meal-plans.component';
-import { HomeComponent } from './home/home.component';
+import { MealPlanComponent } from './meal-plan/meal-plan.component';
+import { ProfileUpdateComponent } from './profile-update/profile-update.component';
 
 const routes: Routes = [
-  { path: 'profile', component: ProfileComponent },
-  { path: '', component: HomeComponent },
-  { path: 'recomendaciones', component: MealPlansComponent },
+  { path: 'meal-plan', component: MealPlanComponent },
+  { path: 'profile-update', component: ProfileUpdateComponent }
 ];
 
 @NgModule({
