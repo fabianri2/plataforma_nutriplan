@@ -7,17 +7,16 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from '@angular/material/input';
-import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
-import { HomeComponent } from './home/home.component';
 import { ToastrModule } from 'ngx-toastr';
-import { MealPlansComponent } from './meal-plans/meal-plans.component';
+import { MealPlanComponent } from './meal-plan/meal-plan.component';
+import { MatCardModule } from '@angular/material/card';
+import { ProfileUpdateComponent } from './profile-update/profile-update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationMenuComponent,
-    HomeComponent,
-    MealPlansComponent,
+    MealPlanComponent,
+    ProfileUpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +26,8 @@ import { MealPlansComponent } from './meal-plans/meal-plans.component';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
