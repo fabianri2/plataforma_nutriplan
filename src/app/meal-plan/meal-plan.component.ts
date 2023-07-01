@@ -16,14 +16,15 @@ export class MealPlanComponent implements OnInit{
   }
 
   getMealPlan(): void {
-    this.mealPlanService.getMealPlan().subscribe(
-      (response: any) => {
-        this.mealPlan = response;
+    this.mealPlanService.getMealPlan()
+      .subscribe(
+        {
+      next: () => {
       },
-      (error: any) => {
-        console.error('Error retrieving meal plan', error);
+      error: () => {
+        console.error('Error retrieving meal plan');
       }
-    );
+  });
   }
 }
 

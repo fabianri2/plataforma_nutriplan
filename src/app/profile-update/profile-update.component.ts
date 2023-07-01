@@ -12,13 +12,15 @@ export class ProfileUpdateComponent {
   constructor(private profileService: ProfileService) { }
 
   updateProfile(): void {
-    this.profileService.updateProfile(this.profile).subscribe(
-      (response: any) => {
+    this.profileService.updateProfile(this.profile)
+      .subscribe(
+        {
+      next: () => {
         console.log('Profile updated successfully');
       },
-      (error: any) => {
-        console.error('Error updating profile', error);
-      }
-    );
+      error: () => {
+        console.error('Error updating profile');
+    }
+        });
   }
 }

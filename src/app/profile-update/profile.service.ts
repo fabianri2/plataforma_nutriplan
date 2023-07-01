@@ -11,6 +11,8 @@ export class ProfileService {
   constructor(private http: HttpClient) { }
 
   updateProfile(profile: any): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/${profile.id}`, profile);
+    const url = `${this.apiUrl}/${profile.id}`; // Reemplaza con la URL adecuada para actualizar el perfil
+
+    return this.http.put<any>(url, profile);
   }
 }
