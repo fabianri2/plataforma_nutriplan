@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>Actualización de Perfil</mat-card-title>
+  <mat-card-content>
+    <!-- Aquí puedes agregar los elementos necesarios para permitir al usuario actualizar su perfil -->
+    <form (ngSubmit)="updateProfile()">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <button type="submit">Actualizar</button>
+    </form>
+  </mat-card-content>
+</mat-card>
