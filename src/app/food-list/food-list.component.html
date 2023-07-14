@@ -1,0 +1,8 @@
+<div class="food-list">
+  <h2>Lista de Comidas</h2>
+  <ul>
+    <ng-container *ngFor="let food of foods">
+      <li>{{ food.name }} - Categoría: {{ food.category }} - Calorías: {{ food.calories }}</li>
+    </ng-container>
+  </ul>
+</div>
