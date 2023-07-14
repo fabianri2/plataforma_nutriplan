@@ -7,12 +7,26 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-  <li class="nav-item">
-    <a class="nav-link" routerLink="/profile">Perfil</a>
-  </li>
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Nutriplan</a>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/profile-update">Perfil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/meal-plan">Planes de Comida</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register">Registro</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-4">
   <router-outlet></router-outlet>
-</ul>
+</div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
