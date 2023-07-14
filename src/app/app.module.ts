@@ -12,6 +12,8 @@ import { MealPlanComponent } from './meal-plan/meal-plan.component';
 import { MatCardModule } from '@angular/material/card';
 import { ProfileUpdateComponent } from './profile-update/profile-update.component';
 import { RegisterComponent } from './register/register.component';
+import { FoodListComponent } from './food-list/food-list.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { RegisterComponent } from './register/register.component';
     MealPlanComponent,
     ProfileUpdateComponent,
     RegisterComponent,
+    FoodListComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { RegisterComponent } from './register/register.component';
     MatInputModule,
     ToastrModule.forRoot(),
     MatCardModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
