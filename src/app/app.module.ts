@@ -11,12 +11,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { MealPlanComponent } from './meal-plan/meal-plan.component';
 import { MatCardModule } from '@angular/material/card';
 import { ProfileUpdateComponent } from './profile-update/profile-update.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MealPlanComponent,
     ProfileUpdateComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
